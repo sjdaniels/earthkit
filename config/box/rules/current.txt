@@ -1,0 +1,14 @@
+set(attribute='%{i,original_request_path}', value='%{RELATIVE_PATH}')
+
+regex( '^/(.+)\.(js|css)$' ) -> set(attribute='%{o,cache-control}', value='public, max-age=31536000')
+path-prefix(includes) -> set(attribute='%{o,cache-control}', value='public, max-age=31536000')
+path-prefix(lucee) -> done
+path-suffix(secrets.json) -> set-error(404)
+path-suffix(server.json) -> set-error(404)
+
+regex( '^/(.+)\.(\d+)\.(js|css|png|jpg|gif)$' ) -> { rewrite('/$1.$3'); done; }
+path-suffix( 'favicon.ico' ) -> done
+path-suffix( 'manifest.json' ) -> done
+regex( '\.(bmp|gif|jpe?g|png|svg|pdf|doc|xls|ico|properties|css|js|htc|woff|woff2|ttf|eot|xml|map|pem)$' ) -> done
+
+regex( '^/(.+)$' ) -> rewrite('/index.cfm/$1')

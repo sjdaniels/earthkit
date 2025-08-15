@@ -1,0 +1,26 @@
+{
+    "app":{
+        "cfengine":"lucee-light@6.0.0.585"
+    },
+    "openbrowser":false,
+    "env":{
+        "APPMODE":"${APP_ENV}",
+        "APPNAME":"EarthKit",
+        "LUCEE_EXTENSIONS":"E6634E1A-4CC5-4839-A83C67549ECA8D5B;name=MongoDB;version=3.12.8.133,CED6227E-0F49-6367-A68D21AACA6B07E8,37C61C0A-5D7E-4256-8572639BE0CF5838,B737ABC4-D43F-4D91-8E8E973E37C40D1B;version=1.0.0.46-SNAPSHOT,D46B46A9-A0E3-44E1-D972A04AC3A8DC10;version=1.0.19.24,66E312DD-D083-27C0-64189D16753FD6F0;version=1.1.0.19"
+    },
+    "dockEnable":false,
+    "trayEnable":true,
+    "trayicon":"assets/images/favicon/favicon-128.png",
+    "web":{
+        "host":"${HOST}",
+        "rewrites":{
+            "enable":true
+        },
+        "rulesFile":"config/box/rules.txt",
+        "http":{
+            "port":"80"
+        }
+    },
+    "trace":false,
+    "name":"earthkit"
+}
