@@ -31,6 +31,6 @@
         "docker:stack":"!docker compose -f docker/docker-compose.yaml ${1}"
     },
     "testbox":{
-        "runner":"/tests/runner.cfm"
+        "runner":"http://earthkit.ffs/tests/runner.cfm"
     }
 }

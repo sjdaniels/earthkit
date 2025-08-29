@@ -1,0 +1,18 @@
+// for small list groups with less padding
+.list-group.small {
+	font-size:0.8em;
+
+	h2.list-group-item {
+		margin:0px;
+		font-size:1.2em;
+	}
+
+	@include media-breakpoint-up(sm) {
+		.list-group-item {
+			padding:5px 10px;
+			.badge {
+				font-size:inherit;
+			}
+		}
+	}
+}

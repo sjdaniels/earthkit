@@ -1,0 +1,115 @@
+:root{
+	--bg:#07070A;
+	--ink:#EAEAF2;
+	--muted:#9AA3B2;
+	--neon:#FF2D7A; /* pink */
+	--cyan:#2FF8F0; /* cyan */
+}
+
+html, body{height:100%;}
+body{
+	background:var(--bg);
+	// color:var(--ink);
+	font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+	overflow-x:hidden;
+}
+
+/* ===== Neon Background Grid & Scanlines ===== */
+.neon-stage{
+	position:relative;
+	isolation:isolate;
+}
+.neon-stage::before{
+	content:"";
+	position:absolute; 
+	inset:-20vmax; 
+	z-index:-2; 
+	opacity:1;
+	background:
+		repeating-linear-gradient(0deg, transparent 0 46px, #11131a 46px 47px),
+		repeating-linear-gradient(90deg, transparent 0 46px, #11131a 46px 47px),
+		radial-gradient(60vmax 60vmax at 20% 0%, rgba(255,45,122,.18), transparent 55%),
+		radial-gradient(60vmax 60vmax at 80% 100%, rgba(47,248,240,.14), transparent 55%);
+	transform:perspective(900px) rotateX(55deg) translateY(-40%);
+
+	@include media-breakpoint-down(sm) {
+		inset:2vmax; 
+	}
+}
+.neon-stage::after{
+	content:""; position:absolute; inset:0; z-index:-1; pointer-events:none; mix-blend-mode:overlay; opacity:1;
+	background:linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px);
+	background-size:100% 3px;
+	animation:scan 8s linear infinite;
+}
+@keyframes scan{to{background-position:0 300px;}}
+
+.badge-neon{
+	border:1px solid rgba(47,248,240,.35)!important;
+	color:var(--cyan)!important;
+}
+.badge-default{
+	border:1px solid rgba(255,255,255,.18)!important;
+	color:var(--muted)!important;
+}
+
+/* ===== Navbar ===== */
+.navbar{
+	// --bs-navbar-color: var(--ink);
+	// --bs-navbar-hover-color: #fff;
+	// backdrop-filter: blur(10px);
+	/* Semi-transparent dark background */
+	background-color: rgba(0, 0, 0, 0.4);
+
+	/* Apply backdrop effects */
+	backdrop-filter: blur(10px) brightness(0.8);
+}
+.navbar-brand{
+	font-family: Orbitron, sans-serif; letter-spacing:.14em; font-weight:900; color:var(--ink);
+}
+.navbar-brand:hover{ color:#fff; }
+.nav-link{ font-weight:700; letter-spacing:.04em; }
+.nav-link.active, .nav-link:hover{ color:#fff; }
+.nav-underline{ position:relative; }
+.nav-underline.active::after, .nav-underline:hover::after{
+	content:""; position:absolute; left:.25rem; right:.25rem; bottom:.35rem; height:2px;
+	background:linear-gradient(90deg, var(--neon), var(--cyan));
+	box-shadow:0 0 16px var(--neon), 0 0 18px var(--cyan);
+}
+
+/* ===== EK Logo (inline SVG) with Neon Flicker ===== */
+.ek-logo{ width:56px; height:auto; display:block; }
+.ek-neon-shadow{
+	filter: drop-shadow(0 0 6px var(--neon)) drop-shadow(0 0 10px var(--cyan)) drop-shadow(0 0 24px rgba(255,45,122,.36));
+	animation:ek-flicker 6s infinite;
+}
+@keyframes ek-flicker{
+	0%, 14%, 22%, 100% { opacity:1; }
+	15% { opacity:.75; }
+	19% { opacity:.35; }
+	24% { opacity:.88; }
+	58% { opacity:.62; }
+}
+
+/* ===== Hero ===== */
+.hero{ padding:14vmin 0 10vmin; text-align:center; }
+.hero .kicker{ color:var(--cyan); letter-spacing:.28em; font-weight:800; }
+.hero h1{ font-family:Orbitron; font-weight:900; letter-spacing:.06em; text-shadow:0 0 18px rgba(255,45,122,.35); }
+.hero p{ color:var(--muted); max-width:62ch; margin:1rem auto 0; }
+.hero .btn-neon{
+	background:linear-gradient(120deg, rgba(255,45,122,.92), rgba(47,248,240,.92));
+	border:none; color:#0a0b0f; font-weight:900; letter-spacing:.06em;
+	box-shadow:0 0 24px rgba(255,45,122,.38), 0 0 28px rgba(47,248,240,.36);
+}
+.hero .btn-ghost{ border:1px solid rgba(255,255,255,.18); color:var(--ink); }
+
+/* ===== Cards ===== */
+.card{
+	background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+	border:1px solid rgba(255,255,255,.08); color:var(--ink);
+	transition: transform .12s ease;
+}
+.card:hover{ box-shadow: 0 10px 40px rgba(255,45,122,.1); }
+
+/* ===== Footer ===== */
+footer small{ color:var(--muted); }

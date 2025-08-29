@@ -1,0 +1,91 @@
+$gray-darker: 		#4B4B4B;
+$gray-dark: 		#6E6D70;
+$gray:				#A5A8AB;
+$gray-light: 		#E5E8E8;
+$gray-lighter: 		#f8f8f8;
+
+// Core brand colors
+$primary:    #ff007f; // Vibrant neon pink
+$secondary:  #8c00ff; // Electric purple
+$success:    #00ffc8; // Aqua teal glow
+$info:       #00bfff; // Neon cyan blue
+$warning:    #ffcc00; // Bright amber (for contrast)
+$danger:     #ff1744; // Neon red
+
+// Grayscale & backgrounds
+$light:      #f2e6ff; // Soft lavender white
+$dark:       #0a0014; // Near-black purple
+$body-bg:    #0f021f; // Deep indigo background
+$body-color: #f8f2ff; // Very light violet text
+
+// Additional accents from the artwork
+$accent-pink:   #ff40a0; // Mid neon pink
+$accent-blue:   #00e0ff; // Luminous electric blue
+$accent-purple: #b366ff; // Mid purple
+$accent-cyan:   #33fff5; // Aqua highlight
+
+// Link colors
+$link-color:       $accent-blue;
+$link-hover-color: lighten($accent-blue, 15%);
+
+// Buttons
+$btn-primary-bg:    $primary;
+$btn-primary-border:$primary;
+$btn-secondary-bg:  $secondary;
+$btn-secondary-border: $secondary;
+
+$link-decoration: none;
+$link-hover-decoration: none;
+$link-hover-color: $success;
+
+$navbar-padding-y: 35px;
+$navbar-padding-x: 0;
+$nav-link-padding-y:1rem;
+$navbar-nav-link-padding-x:1rem;
+
+$dropdown-spacer: 0;
+$dropdown-border-radius: 0 0 10px 10px;
+$dropdown-padding-y: .25rem;
+$dropdown-font-size: 0.85rem;
+
+$card-spacer-x: 0.5rem;
+$card-spacer-y: 1rem;
+
+$focus-ring-width: 0.1rem;
+
+$hr-opacity:                  1;
+
+$input-btn-font-family:       'Open Sans', sans-serif;
+$input-btn-font-size:         0.9rem;
+$input-btn-line-height:       1.5;
+$input-bg: #f8f8f8;
+$input-border-color: #ccc;
+$input-color: #403F42;
+$input-placeholder-color: lighten($input-color,45);
+
+$btn-font-size-sm: 0.75rem;
+$badge-font-size: 1em;
+
+$carousel-control-icon-width:        2.5rem;
+
+$tooltip-color: white;
+$tooltip-font-size: 0.9em;
+$tooltip-max-width:250px;
+$tooltip-padding-y:                 .5rem;
+$tooltip-padding-x:                 .5rem;
+
+$breadcrumb-divider: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8'><path d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='#{$info}'/></svg>");
+
+$enable-shadows: true;
+$btn-box-shadow: none;
+
+// $container-max-widths: (
+//   sm: 540px,
+//   md: 720px,
+//   lg: 960px,
+//   xl: 1140px,
+//   xxl: 1142px
+// );
+
+$offcanvas-horizontal-width: 455px;
+$gradient: linear-gradient(135deg, rgba(black, .30), rgba(#FFFFFF, 0), rgba(black, .15));

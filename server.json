@@ -10,15 +10,14 @@
     },
     "dockEnable":false,
     "trayEnable":true,
-    "trayicon":"assets/images/favicon/favicon-128.png",
+    "trayicon":"includes/images/favicon/apple-icon.png",
     "web":{
-        "host":"${HOST}",
         "rewrites":{
             "enable":true
         },
-        "rulesFile":"config/box/rules.txt",
+        "rulesFile":"config/box/rules/current.txt",
         "http":{
-            "port":"80"
+            "port":"20720"
         }
     },
     "trace":false,
