@@ -27,3 +27,4 @@ effective-pom.xml
 /testbox/**
 /modules/**
 /lib/java/**
+/log
