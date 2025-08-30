@@ -113,3 +113,23 @@ body{
 
 /* ===== Footer ===== */
 footer small{ color:var(--muted); }
+
+/* Make the dark table translucent via Bootstrap's table variables */
+#tour .table-dark{
+	/* main cell background */
+	--bs-table-bg: rgba(33, 37, 41, 0.70); /* adjust 0.00–1.00 */
+
+	/* optional: striping/hover states if you enable them later */
+	--bs-table-striped-bg: rgba(255, 255, 255, 0.06);
+	--bs-table-hover-bg: rgba(255, 255, 255, 0.08);
+
+	/* keep text solid and readable */
+	--bs-table-color: #fff;
+	--bs-table-striped-color: #fff;
+	--bs-table-hover-color: #fff;
+}
+
+/* (Optional) give the header a touch more opacity so it pops */
+#tour .table-dark thead{
+	--bs-table-bg: rgba(33, 37, 41, 0.85);
+}
