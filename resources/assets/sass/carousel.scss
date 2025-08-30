@@ -1,0 +1,126 @@
+/* ===== Billboard Carousel (Neon) ===== */
+.billboard{
+	position: relative;
+}
+.billboard-frame{
+	position: relative;
+	border-radius: 18px;
+	padding: 14px;
+	background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+	border: 1px solid rgba(255,255,255,.10);
+	box-shadow:
+		0 0 24px rgba(255,45,122,.18),
+		0 0 28px rgba(47,248,240,.16),
+		inset 0 0 40px rgba(255,255,255,.03);
+}
+.billboard-frame::before,
+.billboard-frame::after{
+	content: "";
+	position: absolute;
+	inset: 8px;
+	border-radius: 14px;
+	pointer-events: none;
+}
+.billboard-frame::before{
+	border: 2px solid transparent;
+	background:
+		linear-gradient(var(--bg), var(--bg)) padding-box,
+		linear-gradient(90deg, var(--neon), var(--cyan)) border-box;
+	filter: drop-shadow(0 0 12px rgba(255,45,122,.45)) drop-shadow(0 0 14px rgba(47,248,240,.35));
+	animation: billboard-flicker 6s infinite;
+}
+.billboard-frame::after{ /* corner brackets */
+	--c: rgba(255,255,255,.12);
+	background:
+		linear-gradient(90deg, var(--c) 12px, transparent 12px) top left / 60px 2px no-repeat,
+		linear-gradient(90deg, var(--c) 12px, transparent 12px) bottom left / 60px 2px no-repeat,
+		linear-gradient(270deg, var(--c) 12px, transparent 12px) top right / 60px 2px no-repeat,
+		linear-gradient(270deg, var(--c) 12px, transparent 12px) bottom right / 60px 2px no-repeat,
+		linear-gradient(180deg, var(--c) 12px, transparent 12px) top left / 2px 60px no-repeat,
+		linear-gradient(180deg, var(--c) 12px, transparent 12px) top right / 2px 60px no-repeat,
+		linear-gradient(0deg, var(--c) 12px, transparent 12px) bottom left / 2px 60px no-repeat,
+		linear-gradient(0deg, var(--c) 12px, transparent 12px) bottom right / 2px 60px no-repeat;
+	border-radius: 16px;
+}
+@keyframes billboard-flicker{
+	0%, 14%, 22%, 100% { opacity: 1; }
+	15% { opacity: .85; }
+	19% { opacity: .55; }
+	24% { opacity: .92; }
+	58% { opacity: .78; }
+}
+
+.billboard-inner{
+	border-radius: 12px;
+	overflow: hidden;
+}
+.billboard-video{
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+/* Neon legs (posts) */
+.billboard-legs{
+	position: relative;
+	height: 30px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 24px;
+	margin-top: 8px;
+}
+.billboard-legs > span{
+	display: block;
+	height: 100%;
+	border-radius: 999px;
+	background: linear-gradient(180deg, var(--cyan), var(--neon));
+	box-shadow: 0 0 18px rgba(47,248,240,.35), 0 0 20px rgba(255,45,122,.28);
+	opacity: .75;
+}
+
+/* Controls */
+.billboard-control{
+	width: 56px;
+}
+.billboard-control .carousel-control-prev-icon,
+.billboard-control .carousel-control-next-icon{
+	filter: drop-shadow(0 0 8px var(--neon)) drop-shadow(0 0 10px var(--cyan));
+}
+.billboard-control:hover .carousel-control-prev-icon,
+.billboard-control:hover .carousel-control-next-icon{
+	transform: scale(1.06);
+}
+
+/* Indicators (dots) */
+.billboard-dots button{
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: rgba(255,255,255,.25);
+	border: 0;
+}
+.billboard-dots .active{
+	background-image: linear-gradient(90deg, var(--neon), var(--cyan));
+	box-shadow: 0 0 12px rgba(255,45,122,.55), 0 0 14px rgba(47,248,240,.45);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px){
+	.billboard-frame::after{
+		background-size:
+			40px 2px, 40px 2px, 40px 2px, 40px 2px,
+			2px 40px, 2px 40px, 2px 40px, 2px 40px;
+	}
+	.billboard-legs{ gap: 12px; height: 22px; }
+}
+
+/* ensure the viewport just clips & rounds; the ratio lives in each slide */
+.billboard-viewport{
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+/* Optional: give each slide a neutral bg to avoid flashes while loading */
+.carousel-item{
+	background: #0b0b0f;
+}

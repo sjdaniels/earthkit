@@ -3,7 +3,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 // Smooth scroll & active nav highlighting
 $(function(){
-	$('a.nav-link,a.navbar-brand').on('click', function(e){
+	$('a.nav-link,a.navbar-brand,a.btn-nav').on('click', function(e){
 		const target = $(this.getAttribute('href'));
 		if(target.length){ e.preventDefault(); $('html, body').animate({scrollTop: target.offset().top - 72}, 100); }
 	});

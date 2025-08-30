@@ -7,6 +7,6 @@ path-suffix(secrets.json) -> set-error(404)
 path-suffix(server.json) -> set-error(404)
 path-suffix( 'favicon.ico' ) -> done
 path-suffix( 'manifest.json' ) -> done
-regex( '\.(bmp|gif|jpe?g|png|svg|pdf|doc|xls|ico|properties|css|js|htc|woff|woff2|ttf|eot|xml|map|pem)$' ) -> done
+regex( '\.(bmp|gif|jpe?g|png|svg|pdf|doc|xls|ico|properties|css|js|htc|woff|woff2|ttf|eot|xml|map|pem|mp3)$' ) -> done
 
 regex( '^/(.+)$' ) -> rewrite('/index.cfm/$1')

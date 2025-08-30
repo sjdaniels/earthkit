@@ -16,7 +16,9 @@ header, section {
 	}
 }
 
-header.hero {
+header.hero, section.herobg {
+	background-color: transparent;
+	position:relative;
 	picture {
         position: absolute;
         top: 0;

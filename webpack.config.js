@@ -6,7 +6,9 @@ module.exports = elixir(mix => {
 		'node_modules/@popperjs/core/dist/umd/popper.js',
 		'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
 		'resources/assets/js/vendor/modernizr-custom.js',
-		'resources/assets/js/gpt.js'
+		'resources/assets/js/gpt.js',
+		'resources/assets/js/carousel.js',
+		'resources/assets/js/audioplayer.js'
 	], {
 		name:"lib",
 		outputDirectory:"includes/js/",

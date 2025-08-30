@@ -76,15 +76,15 @@
 			</button>
 			<div class="collapse navbar-collapse" id="ekNav">
 				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-					<li class="nav-item"><a class="nav-link nav-underline" href="##music">Music</a></li>
 					<li class="nav-item"><a class="nav-link nav-underline" href="##video">Video</a></li>
-					<li class="nav-item"><a class="nav-link nav-underline" href="##tour">Tour</a></li>
+					<li class="nav-item"><a class="nav-link nav-underline" href="##music">Audio</a></li>
+					<li class="nav-item"><a class="nav-link nav-underline" href="##tour">Live</a></li>
 					<li class="nav-item"><a class="nav-link nav-underline" href="##epk">EPK</a></li>
 				</ul>
 				<ul class="navbar-nav ms-3">
-					<li class="nav-item"><a class="nav-link" target="_blank" href="https://instagram.com" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
-					<li class="nav-item"><a class="nav-link" target="_blank" href="https://youtube.com" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
-					<li class="nav-item"><a class="nav-link" target="_blank" href="https://facebook.com" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+					<li class="nav-item"><a class="nav-link" target="_blank" href="https://www.instagram.com/earthkitband" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+					<li class="nav-item"><a class="nav-link" target="_blank" href="https://www.youtube.com/channel/UCHsrZ7g33e_UtkuHQ2QQrfg" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+					<li class="nav-item"><a class="nav-link" target="_blank" href="https://www.facebook.com/earthkit" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
 				</ul>
 			</div>
 		</div>
@@ -97,8 +97,8 @@
 			<h1 class="display-3">Neon-Driven Hooks. Future-Ready Sound.</h1>
 			<p class="lead">Two guys. One pulse. Electric guitars. Glossy synths. Built for big rooms, small screens, and late nights in a neon city.</p>
 			<div class="d-flex gap-2 justify-content-center mt-3 flex-wrap">
-				<a href="##music" class="btn btn-neon btn-lg"><i class="fa-solid fa-play me-2"></i>Listen</a>
-				<a href="##tour" class="btn btn-ghost btn-lg"><i class="fa-solid fa-ticket me-2"></i>See Us Live</a>
+				<a href="##music" class="btn btn-neon btn-lg btn-nav"><i class="fa-solid fa-play me-2"></i>Listen</a>
+				<a href="##tour" class="btn btn-ghost btn-lg btn-nav"><i class="fa-solid fa-ticket me-2"></i>See Us Live</a>
 			</div>
 		</div>
 		<picture>
@@ -106,63 +106,143 @@
 		</picture>
 	</header>
 
-	<!-- ===== Music ===== -->
-	<section id="music" class="container-fluid py-5">
-		<div class="container">
-			<div class="d-flex align-items-center justify-content-between mb-3">
-				<h2 class="h3 m-0">Music</h2>
-				<span class="badge rounded-pill badge-default">Latest Singles</span>
-			</div>
-			<p class="text-center mb-5">The debut album <strong class="text-primary">Evolition</strong> is out now! Find it on your <a href="https://distrokid.com/hyperfollow/earthkit/evolition">favorite streaming platform.</a></p>
-			<div class="row g-3">
-				<div class="col-md-4 offset-md-1">
-					<iframe class="mb-3" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/song/lucky-one/1514704165?theme=dark"></iframe>
-					<iframe class="mb-3" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/song/all-around-you/1514704164?theme=dark"></iframe>
-					<iframe class="mb-3" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/song/cheap-suede/1514704168?theme=dark"></iframe>
-				</div>
-				<div class="col-md-4 offset-md-1">
-					<img src="/includes/images/jackie-haven.png" alt="Jackie Haven" class="img-fluid">
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- ===== Video ===== -->
 	<section id="video" class="container py-5">
 		<div class="d-flex align-items-center justify-content-between mb-3">
 			<h2 class="h3 m-0">Video</h2>
 			<span class="badge rounded-pill badge-default">Watch</span>
 		</div>
-		<div class="row g-3">
-			<div class="col-lg-4">
-				<div class="card p-2">
-					<div class="ratio ratio-16x9">
-						<iframe src="https://www.youtube.com/embed/1eUf_Q-GVvk" title="Rio Grande (Live at Milk St.)" allowfullscreen></iframe>
-					</div>
+
+		<div class="col-lg-10 offset-lg-1 col-xxl-8 offset-xxl-2 mt-5">
+			<div id="ekVideo" class="carousel slide billboard shadow-lg">
+				<div class="carousel-indicators billboard-dots">
+					<button type="button" data-bs-target="##ekVideo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+					<button type="button" data-bs-target="##ekVideo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					<button type="button" data-bs-target="##ekVideo" data-bs-slide-to="2" aria-label="Slide 3"></button>
 				</div>
-			</div>
-			<div class="col-lg-4">
-				<div class="card p-2">
-					<div class="ratio ratio-16x9">
-						<iframe src="https://www.youtube.com/embed/4d3ooQqMApY" title="Survive (Live from Home)" allowfullscreen></iframe>
+
+				<div class="billboard-frame">
+					<!-- viewport: NO .ratio here -->
+					<div class="billboard-viewport">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<div class="ratio ratio-16x9">
+									<iframe
+										class="billboard-video"
+										src="https://www.youtube.com/embed/1eUf_Q-GVvk?enablejsapi=1&rel=0"
+										title="Rio Grande (Live at Milk St.)"
+										allow="autoplay; encrypted-media; picture-in-picture"
+										allowfullscreen
+										loading="lazy">
+									</iframe>
+								</div>
+							</div>
+
+							<div class="carousel-item">
+								<div class="ratio ratio-16x9">
+									<iframe
+										class="billboard-video"
+										src="https://www.youtube.com/embed/4d3ooQqMApY?enablejsapi=1&rel=0&modestbranding=1"
+										title="Survive (Live from Home)"
+										allow="autoplay; encrypted-media; picture-in-picture"
+										allowfullscreen
+										loading="lazy">
+									</iframe>
+								</div>
+							</div>
+
+							<div class="carousel-item">
+								<div class="ratio ratio-16x9">
+									<iframe
+										class="billboard-video"
+										src="https://www.youtube.com/embed/J---aiyznGQ?enablejsapi=1&rel=0&modestbranding=1"
+										title="Keyboard Cat"
+										allow="autoplay; encrypted-media; picture-in-picture"
+										allowfullscreen
+										loading="lazy">
+									</iframe>
+								</div>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-			<div class="col-lg-4">
-				<div class="card p-2">
-					<div class="ratio ratio-16x9">
-						<iframe src="https://www.youtube.com/embed/J---aiyznGQ" title="YouTube video" allowfullscreen></iframe>
-					</div>
+
+					<!--- <div class="billboard-legs"><span></span><span></span></div> --->
+
+					<button class="carousel-control-prev billboard-control" type="button" data-bs-target="##ekVideo" data-bs-slide="prev" aria-label="Previous">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					</button>
+					<button class="carousel-control-next billboard-control" type="button" data-bs-target="##ekVideo" data-bs-slide="next" aria-label="Next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					</button>
 				</div>
 			</div>
 		</div>
 	</section>
 
+	<!-- ===== Music ===== -->
+	<section id="music" class="container py-5">
+		<div class="d-flex align-items-center justify-content-between mb-3">
+			<h2 class="h3 m-0">Music</h2>
+			<span class="badge rounded-pill badge-neon">Latest Singles</span>
+		</div>
+
+		<div class="row align-items-center">
+			<div class="col-lg-9">
+				<!-- Neon Audio Player -->
+				<div class="ek-audio card p-3 p-md-4">
+					<div class="d-flex align-items-center gap-3 flex-wrap">
+						<button class="btn btn-outline-light ek-prev" aria-label="Previous"><i class="fa-solid fa-backward-step"></i></button>
+						<button class="btn btn-neon ek-toggle" aria-label="Play/Pause"><i class="fa-solid fa-play"></i></button>
+						<button class="btn btn-outline-light ek-next" aria-label="Next"><i class="fa-solid fa-forward-step"></i></button>
+
+						<div class="flex-grow-1">
+							<div class="ek-track-title fw-bold">—</div>
+							<div class="d-flex align-items-center gap-2 mt-1">
+								<small class="ek-time ek-current">0:00</small>
+								<input class="form-range ek-seek flex-grow-1" type="range" min="0" max="100" value="0" step="0.1" aria-label="Seek">
+								<small class="ek-time ek-duration">0:00</small>
+							</div>
+						</div>
+
+						<div class="d-flex align-items-center ms-auto gap-2">
+							<i class="fa-solid fa-volume-low"></i>
+							<input class="form-range ek-volume" type="range" min="0" max="1" step="0.01" value="0.9" aria-label="Volume">
+						</div>
+					</div>
+
+					<!-- Visualizer -->
+					<canvas id="ekVisualizer" height="50" class="w-100 mt-3"></canvas>
+
+					<!-- Playlist -->
+					<ul class="list-group list-group-flush mt-3 ek-playlist">
+						<li class="list-group-item d-flex justify-content-between align-items-center">
+							<span class="ek-item-title">Not Your Birthday</span>
+							<button class="btn btn-sm btn-outline-light ek-play-item" data-index="0"><i class="fa-solid fa-play"></i></button>
+						</li>
+						<li class="list-group-item d-flex justify-content-between align-items-center">
+							<span class="ek-item-title">Rio Grande</span>
+							<button class="btn btn-sm btn-outline-light ek-play-item" data-index="1"><i class="fa-solid fa-play"></i></button>
+						</li>
+						<li class="list-group-item d-flex justify-content-between align-items-center">
+							<span class="ek-item-title">Magpie's Nest</span>
+							<button class="btn btn-sm btn-outline-light ek-play-item" data-index="2"><i class="fa-solid fa-play"></i></button>
+						</li>
+					</ul>
+
+					<!-- Hidden audio element -->
+					<audio id="ekAudio" preload="metadata"></audio>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<img src="/includes/images/jackie-haven.png" alt="Jackie Haven" class="img-fluid">
+			</div>
+		</div>
+	</section>
+
 	<!-- ===== Tour ===== -->
-	<section id="tour" class="container-fluid py-5">
+	<section id="tour" class="container-fluid py-5 herobg">
 		<div class="container">
 			<div class="d-flex align-items-center justify-content-between mb-3">
-				<h2 class="h3 m-0">Tour</h2>
+				<h2 class="h3 m-0">Live Shows</h2>
 				<span class="badge rounded-pill badge-default">On The Road</span>
 			</div>
 			<div class="card p-3">
@@ -188,6 +268,9 @@
 				</div>
 			</div>
 		</div>
+		<picture>
+			<img src="/includes/images/building.png" alt="Hero Image" class="img-fluid">
+		</picture>
 	</section>
 
 	<!-- ===== EPK ===== -->
