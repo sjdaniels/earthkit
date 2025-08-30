@@ -43,10 +43,9 @@ namespace :deploy do
     on roles(:app) do |host|
       # Your restart mechanism here, for example:
       # execute :touch, release_path.join('tmp/restart.txt')
-      execute "cp #{release_path}/config/box/server.json /home/deploy/server.json"
       execute "rsync --stats -rlpgoDc --delete #{release_path}/ #{deploy_to}/production/"
       # reinit
-      execute "curl http://localhost:8111/?fwreinit=#{fetch(:reinit_pw)} -s -o /dev/null -m 30"
+      execute "curl http://localhost:85/?fwreinit=#{fetch(:reinit_pw)} -s -o /dev/null -m 30"
     end
   end
 
