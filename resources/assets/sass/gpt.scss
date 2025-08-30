@@ -133,3 +133,36 @@ footer small{ color:var(--muted); }
 #tour .table-dark thead{
 	--bs-table-bg: rgba(33, 37, 41, 0.85);
 }
+
+/* ===== Neon Text Flicker Utility ===== */
+.ek-flicker{
+	/* tweak color per element via --ek-flicker-color */
+	--ek-flicker-color: #FF2D7A; /* default pink */
+	position: relative;
+	text-shadow:
+		0 0 6px var(--ek-flicker-color),
+		0 0 14px rgba(47,248,240,0.45);
+	animation: ek-flicker 6s infinite;
+}
+
+/* Optional: faster/softer variants */
+.ek-flicker.ek-flicker-fast{ animation-duration: 3s; }
+.ek-flicker.ek-flicker-soft{ text-shadow: 0 0 4px var(--ek-flicker-color), 0 0 10px rgba(47,248,240,0.35); }
+
+/* Color helpers (override the variable) */
+.ek-flicker.cyan{ --ek-flicker-color: #2FF8F0; }
+.ek-flicker.amber{ --ek-flicker-color: #FFC658; }
+.ek-flicker.pink{ --ek-flicker-color: #FF2D7A; }
+
+@keyframes ek-flicker{
+	0%, 13%, 22%, 100% { opacity: 1; filter: none; }
+	14% { opacity: .85; }
+	19% { opacity: .55; }
+	24% { opacity: .92; }
+	58% { opacity: .78; }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+	.ek-flicker{ animation: none; }
+}
