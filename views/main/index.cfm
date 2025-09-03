@@ -1,4 +1,8 @@
 <cfoutput>
-	<h1 class="text-secondary">Welcome to EarthKit</h1>
-	<p>Your content goes here...</p>
+	#view("main/navbar")#
+	#view("main/hero")#
+	#view("main/video")#
+	#view("main/audio")#
+	#view("main/tour")#
+	#view("main/epk")#
 </cfoutput>

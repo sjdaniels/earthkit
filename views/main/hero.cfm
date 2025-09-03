@@ -2,12 +2,12 @@
 
 	<!-- ===== Hero ===== -->
 	<header id="top" class="hero container-fluid">
-		<div class="container">
-			<p class="kicker mb-2">ALT ROCK DUO</p>
-			<h1 class="display-3">Neon-Driven Hooks. Future-Ready Sound.</h1>
-			<p class="lead">Two guys. <span class="ek-flicker">One pulse.</span> Electric guitars. Glossy synths. Built for big rooms, small screens, and late nights in a <span class="ek-flicker cyan">neon city.</span></p>
+		<div class="container pt-4">
+			<p class="kicker mb-2">EARTHKIT: ALT ROCK DUO</p>
+			<h1 class="display-3 my-5">coming to a future near you</h1>
 			<div class="d-flex gap-2 justify-content-center mt-3 flex-wrap">
-				<a href="##music" class="btn btn-neon btn-lg btn-nav"><i class="fa-solid fa-play me-2"></i>Listen</a>
+				<a href="##video" class="btn btn-neon btn-lg btn-nav"><i class="fa-solid fa-play me-2"></i>Watch</a>
+				<a href="##music" class="btn btn-ghost btn-lg btn-nav"><i class="fa-solid fa-play me-2"></i>Listen</a>
 				<a href="##tour" class="btn btn-ghost btn-lg btn-nav"><i class="fa-solid fa-ticket me-2"></i>See Us Live</a>
 			</div>
 		</div>

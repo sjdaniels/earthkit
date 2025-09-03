@@ -43,12 +43,7 @@
 
 <body>
 
-	#view("main/navbar")#
-	#view("main/hero")#
-	#view("main/video")#
-	#view("main/audio")#
-	#view("main/tour")#
-	#view("main/epk")#
+	#view()#
 
 	<footer class="container text-center py-5">
 		<small>© <span id="year"></span> EarthKit. All rights reserved. <span class="ek-flicker ek-flicker-fast">All wrongs reversed.</span></small>

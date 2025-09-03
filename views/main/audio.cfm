@@ -6,7 +6,7 @@
 			<span class="badge rounded-pill badge-neon">Latest Singles</span>
 		</div>
 
-		<div class="row align-items-center">
+		<div class="row align-items-center mb-5">
 			<div class="col-lg-9">
 				<!-- Neon Audio Player -->
 				<div class="ek-audio card p-3 p-md-4">
@@ -57,5 +57,6 @@
 				<img src="/includes/images/jackie-haven.png" alt="Jackie Haven" class="img-fluid">
 			</div>
 		</div>
+		<p class="text-center">And check out the debut EP <strong class="ek-flicker">Evolition</strong> - available on <a href="https://distrokid.com/hyperfollow/earthkit/evolition">all streaming platforms</a>.</p>
 	</section>
 </cfoutput>
