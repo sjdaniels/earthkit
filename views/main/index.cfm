@@ -4,5 +4,5 @@
 	#view("main/video")#
 	#view("main/audio")#
 	#view("main/tour")#
-	#view("main/epk")#
+	<!--- #view("main/epk")# --->
 </cfoutput>

@@ -37,7 +37,7 @@
 					<li class="nav-item"><a class="nav-link nav-underline" href="##video">Video</a></li>
 					<li class="nav-item"><a class="nav-link nav-underline" href="##music">Audio</a></li>
 					<li class="nav-item"><a class="nav-link nav-underline" href="##tour">Live</a></li>
-					<li class="nav-item"><a class="nav-link nav-underline" href="##epk">EPK</a></li>
+					<!--- <li class="nav-item"><a class="nav-link nav-underline" href="##epk">EPK</a></li> --->
 				</ul>
 				<ul class="navbar-nav ms-3">
 					<li class="nav-item"><a class="nav-link" target="_blank" href="https://www.instagram.com/earthkitband" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>

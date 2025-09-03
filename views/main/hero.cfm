@@ -7,7 +7,7 @@
 			<h1 class="display-3 my-5">coming to a future near you</h1>
 			<div class="d-flex gap-2 justify-content-center mt-3 flex-wrap">
 				<a href="##video" class="btn btn-neon btn-lg btn-nav"><i class="fa-solid fa-play me-2"></i>Watch</a>
-				<a href="##music" class="btn btn-ghost btn-lg btn-nav"><i class="fa-solid fa-play me-2"></i>Listen</a>
+				<a href="##music" class="btn btn-ghost btn-lg btn-nav"><i class="fa-solid fa-volume me-2"></i>Listen</a>
 				<a href="##tour" class="btn btn-ghost btn-lg btn-nav"><i class="fa-solid fa-ticket me-2"></i>See Us Live</a>
 			</div>
 		</div>
